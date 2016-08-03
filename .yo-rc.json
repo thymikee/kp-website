@@ -1,0 +1,16 @@
+{
+  "generator-chisel": {
+    "config": {
+      "name": "kazimierzpierzchala",
+      "author": "thymikee",
+      "nameSlug": "kazimierzpierzchala",
+      "nameCamel": "Kazimierzpierzchala",
+      "features": {
+        "has_babel": true
+      }
+    },
+    "pages": [
+      "Landing"
+    ]
+  }
+}

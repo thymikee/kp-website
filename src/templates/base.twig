@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ pageName }} - kazimierzpierzchala</title>
+  <link rel="stylesheet" property="stylesheet" href="styles/{{ assetPath('main.css') }}" type="text/css" media="screen">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.querySelector('html').classList.remove('no-js');</script>
+</head>
+<body class="{{ bodyClass }}">
+  <div class="colorbar">
+    <div class="colorbar__item u-bg-red"></div>
+    <div class="colorbar__item u-bg-navy"></div>
+    <div class="colorbar__item u-bg-blue"></div>
+  </div>
+  {% block header %}
+    No content
+  {% endblock %}
+  <main>
+    {% block content %}
+      No content
+    {% endblock %}
+  </main>
+  <aside>
+    {% block aside %}
+      Sidebar
+    {% endblock %}
+  </aside>
+  <footer>
+    <div class="colorbar">
+      <div class="colorbar__item colorbar__item--high u-bg-red"></div>
+      <div class="colorbar__item colorbar__item--high u-bg-navy"></div>
+      <div class="colorbar__item colorbar__item--high u-bg-blue"></div>
+    </div>
+  </footer>
+  <script src="scripts/{{ assetPath('bundle.js') }}" async></script>
+</body>
+</html>

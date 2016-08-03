@@ -1,0 +1,46 @@
+.header {
+  padding: 2.5rem 1rem;
+
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  display: block;
+  width: 18rem;
+
+  img {
+    width: 100%;
+  }
+}
+
+.header__nav {
+  flex: 0 1 50%;
+}
+
+.header__contact {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__contact__item {
+  padding: 1rem 1.2rem;
+
+  > span {
+    float: left;
+  }
+}
+
+.header__navlist {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.header__navlist__item {
+  padding: 1rem 1.2rem;
+}

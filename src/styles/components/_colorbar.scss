@@ -1,0 +1,27 @@
+.colorbar {
+  display: flex;
+  width: 100%;
+
+  .colorbar__item {
+    &:nth-child(1) {
+      flex: 1 0 50%;
+    }
+
+    &:nth-child(2) {
+      flex: 1 0 22%;
+    }
+
+    &:nth-child(3) {
+      flex: 1 0 28%;
+    }
+  }
+}
+
+.colorbar__item {
+  height: 1rem;
+  flex: 1;
+
+  &--high {
+    height: 6rem;
+  }
+}
