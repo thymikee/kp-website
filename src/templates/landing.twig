@@ -1,39 +1,34 @@
 {% extends "base.twig" %}
 {% set pageName = 'Landing' %}
 
-{% block header %}
-  <header class="header">
+{% block content %}
+  <section class="hero">
     <div class="container">
-      <a href="/" class="header__logo">
-        <img src="assets/images/logo.svg" alt="Kazimierz Pierzchała" />
-      </a>
-
-      <div class="header__nav">
-        <div class="header__contact">
-          <a class="header__contact__item" href="mailto:biuro@kolbuszowaubezpieczenia.pl">
-            <span class="u-color-navy">biuro</span>
-            <span class="u-color-blue">@</span>
-            <span class="u-color-red">kolbuszowaubezpieczenia.pl</span>
-          </a>
-          <a class="header__contact__item" href="tel:+48602441061">
-            <span class="u-color-red">+48 602</span>
-            <span class="u-color-blue">441</span>
-            <span class="u-color-navy">061</span>
-          </a>
+      <h1 class="hero__title">
+        <span class="u-color-navy">Ubezpieczenia</span>
+        <span class="u-block u-color-red">w najlepszym wydaniu</span>
+      </h1>
+      <div class="hero__badges">
+        <div class="badge u-color-red">
+          <i class="badge__inner u-color-blue icon-house"></i>
         </div>
-        <ul class="header__navlist">
-          <li class="header__navlist__item"><a href="#">Ubezpieczenia</a></li>
-          <li class="header__navlist__item"><a href="#">Placówki</a></li>
-          <li class="header__navlist__item"><a href="#">O mnie</a></li>
-          <li class="header__navlist__item"><a href="#"><b>Kontakt</b></a></li>
-        </ul>
+        <div class="badge u-color-blue">
+          <i class="badge__inner u-color-navy icon-woman"></i>
+        </div>
+        <div class="badge u-color-navy">
+          <i class="badge__inner u-color-red icon-car"></i>
+        </div>
       </div>
     </div>
-  </header>
-{% endblock %}
-
-{% block content %}
-  <h1>Hello <span class="js-greeting"></span></h1>
+  </section>
+  <div class="dots">
+    <span class="dots__item u-bg-red"></span>
+    <span class="dots__item u-bg-blue"></span>
+    <span class="dots__item u-bg-navy"></span>
+  </div>
+  <div class="">
+    <img src="assets/images/car.jpg" alt="" />
+  </div>
 {% endblock %}
 
 {% block aside %}

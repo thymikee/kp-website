@@ -1,0 +1,12 @@
+.dots {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.dots__item {
+  display: block;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin: 0 0.5rem;
+}
