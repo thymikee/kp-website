@@ -1,9 +1,25 @@
 .hero {
   padding: 10rem 0;
+
+  > .container {
+    @include bp-medium {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
 }
 
 .hero__title {
   font-weight: normal;
   font-size: 3.2rem;
   line-height: 1.15;
+}
+
+.hero__badges {
+  display: flex;
+
+  .badge {
+    margin: 0 2rem;
+  }
 }

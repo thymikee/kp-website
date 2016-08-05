@@ -1,0 +1,18 @@
+.badge {
+  position: relative;
+  width: 11.2rem;
+}
+
+.badge__shield {
+  display: block;
+  width: 100%;
+}
+
+.badge__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  max-height: 100%;
+  transform: translateX(-50%) translateY(-50%);;
+}
