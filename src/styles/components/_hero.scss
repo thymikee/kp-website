@@ -1,5 +1,9 @@
 .hero {
-  padding: 10rem 0;
+  padding: 3rem 0;
+
+  @include bp-medium {
+    padding: 10rem 0;
+  }
 
   > .container {
     @include bp-medium {
@@ -11,15 +15,27 @@
 }
 
 .hero__title {
+  text-align: center;
   font-weight: normal;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   line-height: 1.15;
+  word-break: break-word;
+
+  @include bp-medium {
+    font-size: 3.2rem;
+    text-align: left;
+  }
 }
 
 .hero__badges {
   display: flex;
+  justify-content: center;
 
   .badge {
-    margin: 0 2rem;
+    margin: 0 1rem;
+
+    @include bp-medium {
+      margin: 0 2rem;
+    }
   }
 }

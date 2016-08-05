@@ -24,16 +24,38 @@
       </div>
     </div>
   </section>
+
   <div class="dots">
     <span class="dots__item u-bg-red"></span>
     <span class="dots__item u-bg-blue"></span>
     <span class="dots__item u-bg-navy"></span>
   </div>
-  <div class="">
-    <img src="assets/images/car.jpg" alt="" />
-  </div>
-{% endblock %}
 
-{% block aside %}
-  <p>Sidebar</p>
+  <section>
+    <h2 class="heading heading--lg heading--center">Ubezpieczamy</h2>
+    <div class="">
+      <div class="">
+        <img src="assets/images/car.jpg" alt="" />
+        <div class="colorbar__item u-bg-red"></div>
+      </div>
+      <ul class="u-color-red">
+        <li>Dom/Mieszkanie</li>
+        <li>Samochód</li>
+        <li>Podróż</li>
+        <li>Zdrowie i życie</li>
+        <li>Bieznes</li>
+      </ul>
+      <div class="">
+        <p>
+          Ponad <span class="u-color-blue heading--lg">5000</span>
+          <span>zadowolonych klientów</span>
+        </p>
+        {% include 'svg-icon.twig' with { class: 'u-color-red', name: 'smile' } %}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="heading heading--lg heading--center">Placówki</h2>
+  </section>
 {% endblock %}

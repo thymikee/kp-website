@@ -1,11 +1,20 @@
 .badge {
   position: relative;
-  width: 11.2rem;
+  width: 9.4rem;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 120%;
+  }
 }
 
 .badge__shield {
+  position: absolute;
+  top: 0;
   display: block;
   width: 100%;
+  max-height: 100%;
 }
 
 .badge__inner {

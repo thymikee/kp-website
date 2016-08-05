@@ -18,7 +18,12 @@
 }
 
 .header__nav {
-  flex: 0 1 50%;
+  display: none;
+  flex: 1 1 50%;
+
+  @include bp-medium {
+    display: block;
+  }
 }
 
 .header__contact {
