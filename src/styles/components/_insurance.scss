@@ -10,7 +10,7 @@
 .insurance__container {
 
   @include bp-medium {
-    font-size: 1.25em;
+    font-size: 2rem;
   }
 }
 
@@ -43,12 +43,24 @@
 }
 
 .insurance__list {
-  float: left;
+  margin: 2rem 0;
+  text-align: center;
   list-style: none;
-  margin: 0;
+
+  @include bp-medium {
+    margin: 0;
+    float: left;
+    text-align: left;
+  }
 
   > li {
-    margin-bottom: 0;
+    display: inline-block;
+    margin: 0 1rem;
+
+    @include bp-medium {
+      margin: 0;
+      display: block;
+    }
   }
 }
 
@@ -64,5 +76,5 @@
 
 .insurance__happy__strong {
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 2.4rem;
 }

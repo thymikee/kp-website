@@ -1,0 +1,25 @@
+.places {
+
+}
+
+.places__list {
+  list-style: none;
+  margin: 0;
+
+  @include bp-medium {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.places__list__item {
+  margin-bottom: 3rem;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include bp-medium {
+    flex: 1;
+    max-width: 30%;
+  }
+}

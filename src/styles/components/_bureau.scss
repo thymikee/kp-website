@@ -1,0 +1,83 @@
+.bureau {
+
+}
+
+.bureau__title {
+  text-align: center;
+}
+
+.bureau__image {
+  position: relative;
+  overflow: hidden;
+  margin: 1.5rem 0;
+
+  @include bp-medium {
+    margin: 4rem 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 53%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+    mix-blend-mode: overlay;
+  }
+
+  &--red {
+    &::after {
+      background: $color-red;
+    }
+  }
+
+  &--blue {
+    &::after {
+      background: $color-blue;
+    }
+  }
+
+  &--navy {
+    &::after {
+      background: $color-navy;
+    }
+  }
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.bureau__contact {
+  list-style: none;
+  margin: 0 0 0 4rem;
+  line-height: 1.6;
+  letter-spacing: 1.25px;
+
+  @include bp-medium {
+    font-size: 1.8rem;
+  }
+}
+
+.bureau__contact__inner {
+  padding-left: 3.5rem;
+}
+
+.bureau__contact__icon {
+  width: 1.4rem;
+  height: 2.1rem;
+  float: left;
+  margin-right: 1rem;
+}

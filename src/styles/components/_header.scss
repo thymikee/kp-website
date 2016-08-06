@@ -47,7 +47,10 @@
 }
 
 .header__navlist__item {
-  padding: 1rem 1.2rem;
+  > a {
+    display: block;
+    padding: 1rem 1.2rem;
+  }
 }
 
 .header__mobile-phone {

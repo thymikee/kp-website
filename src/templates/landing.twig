@@ -60,9 +60,85 @@
     </div>
   </section>
 
-  <section>
+  <section class="places">
     <div class="container">
       <h2 class="heading heading--lg heading--section">Placówki</h2>
+
+      <ul class="places__list">
+        <li class="places__list__item">
+          <div class="bureau">
+            <h3 class="bureau__title heading heading--md"><span class="u-color-red">1. </span>Kolbuszowa</h3>
+            <div class="bureau__image bureau__image--red">
+              <img src="assets/images/kolbuszowa.jpg" alt="" />
+            </div>
+            <ul class="bureau__contact">
+              <li class="bureau__contact__item">
+                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'location' } %}
+                <div class="bureau__contact__inner">
+                  ul. Ruczki 10 /5
+                  <span class="u-block">36-100 Kolbuszowa</span>
+                </div>
+              </li>
+              <li class="bureau__contact__item">
+                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'telephone' } %}
+                <div class="bureau__contact__inner">
+                  508 207 089
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="places__list__item">
+          <h3 class="bureau__title heading heading--md"><span class="u-color-red">2. </span>Rzeszów</h3>
+          <div class="bureau">
+            <div class="bureau__image bureau__image--blue">
+              <img src="assets/images/rzeszow1.jpg" alt="" />
+            </div>
+            <ul class="bureau__contact">
+              <li class="bureau__contact__item">
+                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'location' } %}
+                <div class="bureau__contact__inner">
+                  ul. Graniczna 4b LU-8
+                  <span class="u-block">35-326 Rzeszów</span>
+                </div>
+              </li>
+              <li class="bureau__contact__item">
+                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'telephone' } %}
+                <div class="bureau__contact__inner">
+                  17 227 51 35
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="places__list__item">
+          <h3 class="bureau__title heading heading--md"><span class="u-color-red">3. </span>Rzeszów</h3>
+          <div class="bureau">
+            <div class="bureau__image bureau__image--navy">
+              <img src="assets/images/rzeszow2.jpg" alt="" />
+            </div>
+            <ul class="bureau__contact">
+              <li class="bureau__contact__item">
+                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'location' } %}
+                <div class="bureau__contact__inner">
+                  ul. Hetmańska 120
+                  <span class="u-block">35-326 Rzeszów</span>
+                </div>
+              </li>
+              <li class="bureau__contact__item">
+                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'telephone' } %}
+                <div class="bureau__contact__inner">
+                  17 227 51 35
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="map">
+
     </div>
   </section>
 {% endblock %}
