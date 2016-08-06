@@ -1,5 +1,5 @@
 .header {
-  padding: 2.5rem 1rem;
+  padding: 2.5rem 0;
 
   > .container {
     display: flex;
@@ -48,4 +48,15 @@
 
 .header__navlist__item {
   padding: 1rem 1.2rem;
+}
+
+.header__mobile-phone {
+  font-weight: bold;
+  color: $color-red;
+  padding: 2rem;
+  margin-right: -2rem;
+
+  @include bp-medium {
+    display: none;
+  }
 }

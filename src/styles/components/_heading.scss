@@ -14,4 +14,13 @@
       font-size: 3rem;
     }
   }
+
+  &--section {
+    text-align: center;
+
+    @include bp-medium {
+      text-align: left;
+      margin-left: 45%;
+    }
+  }
 }

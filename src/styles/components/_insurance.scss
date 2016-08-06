@@ -1,0 +1,68 @@
+.insurance {
+  clear: both;
+  margin: 2rem 0 5rem;
+
+  @include bp-medium {
+    margin: 4rem 0 10rem;
+  }
+}
+
+.insurance__container {
+
+  @include bp-medium {
+    font-size: 1.25em;
+  }
+}
+
+.insurance__media {
+  display: none;
+
+  @include bp-medium {
+    display: block;
+    float: left;
+    width: 37%;
+    margin-right: 8%;
+    margin-top: -4rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.insurance__content {
+  flex: 1 1 55%;
+
+  > .heading {
+    text-align: center;
+
+    @include bp-medium {
+      text-align: left;
+    }
+  }
+}
+
+.insurance__list {
+  float: left;
+  list-style: none;
+  margin: 0;
+
+  > li {
+    margin-bottom: 0;
+  }
+}
+
+.insurance__happy {
+  min-width: 28%;
+  text-align: center;
+
+  svg {
+    width: 6rem;
+    height: 2rem;
+  }
+}
+
+.insurance__happy__strong {
+  font-weight: normal;
+  font-size: 1.2em;
+}
