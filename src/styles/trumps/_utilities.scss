@@ -26,3 +26,9 @@
 .u-block {
   display: block;
 }
+
+.u-oneliner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
