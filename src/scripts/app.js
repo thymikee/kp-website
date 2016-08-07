@@ -3,6 +3,6 @@
   Author: thymikee
  */
 
-import greet from './greeting';
+import GoogleMap from './google-map';
 
-greet('World');
+new GoogleMap();
