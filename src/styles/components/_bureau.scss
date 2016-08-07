@@ -1,5 +1,11 @@
 .bureau {
+  .icon-list {
+    margin-left: 2rem;
 
+    @include bp-medium {
+      margin-left: 4rem;
+    }
+  }
 }
 
 .bureau__title {
@@ -58,26 +64,4 @@
     height: 100%;
     object-fit: cover;
   }
-}
-
-.bureau__contact {
-  list-style: none;
-  margin: 0 0 0 4rem;
-  line-height: 1.6;
-  letter-spacing: 1.25px;
-
-  @include bp-medium {
-    font-size: 1.8rem;
-  }
-}
-
-.bureau__contact__inner {
-  padding-left: 3.5rem;
-}
-
-.bureau__contact__icon {
-  width: 1.4rem;
-  height: 2.1rem;
-  float: left;
-  margin-right: 1rem;
 }

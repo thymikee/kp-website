@@ -14,6 +14,7 @@ class GoogleMap {
       zoom: 15,
       center: this.center,
       scrollwheel: false,
+      mapTypeControl: false,
       styles,
     });
 

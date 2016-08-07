@@ -71,17 +71,17 @@
             <div class="bureau__image bureau__image--red">
               <img src="assets/images/kolbuszowa.jpg" alt="" />
             </div>
-            <ul class="bureau__contact">
-              <li class="bureau__contact__item">
-                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'location' } %}
-                <div class="bureau__contact__inner">
+            <ul class="icon-list">
+              <li class="icon-list__item">
+                {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'location' } %}
+                <div class="icon-list__item__inner">
                   ul. Ruczki 10 / 5
                   <span class="u-block">36-100 Kolbuszowa</span>
                 </div>
               </li>
-              <li class="bureau__contact__item">
-                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'telephone' } %}
-                <div class="bureau__contact__inner">
+              <li class="icon-list__item">
+                {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'telephone' } %}
+                <div class="icon-list__item__inner">
                   508 207 089
                 </div>
               </li>
@@ -94,17 +94,17 @@
             <div class="bureau__image bureau__image--blue">
               <img src="assets/images/rzeszow1.jpg" alt="" />
             </div>
-            <ul class="bureau__contact">
-              <li class="bureau__contact__item">
-                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'location' } %}
-                <div class="bureau__contact__inner">
+            <ul class="icon-list">
+              <li class="icon-list__item">
+                {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'location' } %}
+                <div class="icon-list__item__inner">
                   ul. Graniczna 4b LU-8
                   <span class="u-block">35-326 Rzeszów</span>
                 </div>
               </li>
-              <li class="bureau__contact__item">
-                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'telephone' } %}
-                <div class="bureau__contact__inner">
+              <li class="icon-list__item">
+                {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'telephone' } %}
+                <div class="icon-list__item__inner">
                   17 227 51 35
                 </div>
               </li>
@@ -117,17 +117,17 @@
             <div class="bureau__image bureau__image--navy">
               <img src="assets/images/rzeszow2.jpg" alt="" />
             </div>
-            <ul class="bureau__contact">
-              <li class="bureau__contact__item">
-                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'location' } %}
-                <div class="bureau__contact__inner">
+            <ul class="icon-list">
+              <li class="icon-list__item">
+                {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'location' } %}
+                <div class="icon-list__item__inner">
                   ul. Hetmańska 120
                   <span class="u-block">35-326 Rzeszów</span>
                 </div>
               </li>
-              <li class="bureau__contact__item">
-                {% include 'svg-icon.twig' with { class: 'bureau__contact__icon u-color-red', name: 'telephone' } %}
-                <div class="bureau__contact__inner">
+              <li class="icon-list__item">
+                {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'telephone' } %}
+                <div class="icon-list__item__inner">
                   17 227 51 35
                 </div>
               </li>
@@ -136,7 +136,68 @@
         </li>
       </ul>
     </div>
-
-    <div class="map"></div>
   </section>
+
+  <div class="map"></div>
+
+  <section class="about">
+    <div class="about__container container">
+      <div class="two-col">
+        <div class="two-col__column">
+          <div class="about__pic">
+            <div class="about__pic__colorbar--top colorbar__item u-bg-red"></div>
+            <img src="//placehold.it/341x255" alt="" />
+            <div class="about__pic__colorbar--bottom-last colorbar__item u-bg-blue"></div>
+            <div class="about__pic__colorbar--bottom colorbar__item u-bg-navy"></div>
+          </div>
+          <blockquote class="blockquote">
+            <p class="blockquote__copy">Moi klienci wiedzą, ze w razie szkody, mogą na mnie liczyć. Służę poradą i doradzam praktycznie.</p>
+            <footer>
+              <cite class="blockquote__cite">Kazimierz Pierzchała</cite>
+            </footer>
+          </blockquote>
+        </div>
+        <div class="two-col__column">
+          <h2 class="heading heading--lg">O mnie</h2>
+          <h3 class="heading heading--md u-color-red about__subheading">Specjalizuję się w ubezpieczeniach już ponad 15 lat. </h3>
+          <div class="about__copy">
+            <p>
+              Dzięki wieloletniemu doświadczeniu w <strong>branży ubezpieczeń</strong>, swoim klientom doradzam najlepsze rozwiązania dostosowane do ich potrzeb i budżetu.
+            </p>
+            <p>
+              Prowadzę <b>biura ubezpieczeniowe w Kolbuszowej i w Rzeszowie</b>. Działam i operuję na terenie całego podkarpacia.
+            </p>
+            <p>
+              Wybierając moją ofertę ubezpieczeń zyskujesz coś więcej, niż umowę. Masz pewność, że <b>otrzymasz profesjonalną pomoc i wsparcie</b>.
+            </p>
+          </div>
+
+          <h3 class="heading heading--sm"><span class="u-color-red u-block">Masz pytanie?</span><strong>Zadzwoń</strong> do mnie lub napisz!</h3>
+
+          <ul class="icon-list icon-list--spread">
+            <li class="icon-list__item">
+              {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'telephone' } %}
+              <a href="tel:+48602441061" class="icon-list__item__inner">
+                <span class="u-color-red">+48 602</span>
+                <span class="u-color-blue">441</span>
+                <span class="u-color-navy">061</span>
+              </a>
+            </li>
+            <li class="icon-list__item">
+              {% include 'svg-icon.twig' with { class: 'icon-list__item__icon u-color-red', name: 'mail' } %}
+              <a href="mailto:006253@ag.hestia.pl" class="icon-list__item__inner">
+                <span class="u-color-red">006253</span><span class="u-color-blue">@ag</span><span class="u-color-navy">hestia.pl</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="dots">
+    <span class="dots__item u-bg-red"></span>
+    <span class="dots__item u-bg-blue"></span>
+    <span class="dots__item u-bg-navy"></span>
+  </div>
 {% endblock %}

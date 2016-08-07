@@ -1,0 +1,31 @@
+$icon-list-line-height: 1.5;
+
+.icon-list {
+  list-style: none;
+  margin: 0;
+  line-height: $icon-list-line-height;
+  letter-spacing: 0.25px;
+
+  @include bp-medium {
+    font-size: 1.8rem;
+  }
+
+  &--spread {
+    .icon-list__item {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.icon-list__item__inner {
+  display: block;
+  padding-left: 1.5em;
+}
+
+.icon-list__item__icon {
+  display: block;
+  width: 0.8em;
+  height: 1em * $icon-list-line-height;
+  float: left;
+  margin-right: 1rem;
+}

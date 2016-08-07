@@ -1,0 +1,39 @@
+.blockquote {
+  color: $color-light-gray;
+  margin: 5rem 0;
+
+  @include bp-medium {
+    margin: 7rem 0;
+  }
+}
+
+.blockquote__copy {
+  font-size: 2rem;
+  white-space: 0.5px;
+  quotes: "“" "”" "‘" "’";
+
+  &::before {
+    content: open-quote;
+    color: $color-navy;
+  }
+
+  &::after {
+    content: close-quote;
+    color: $color-red;
+  }
+
+  @include bp-medium {
+    font-size: 2.4rem;
+  }
+}
+
+.blockquote__cite {
+  font-size: 1.4rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &::before {
+    content: "– "
+  }
+}

@@ -1,0 +1,61 @@
+.about {
+  .icon-list {
+    font-size: 2rem;
+  }
+}
+
+.about__subheading {
+  margin: 2rem 0;
+
+  @include bp-medium {
+    margin: 6rem 0 5rem;
+  }
+}
+
+.about__copy {
+  p {
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+  }
+}
+
+.about__pic {
+  position: relative;
+  max-width: 34rem;
+  margin: 0 auto;
+
+  @include bp-medium {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about__pic__colorbar {
+  &--top {
+    max-width: 24rem;
+
+    @include bp-medium {
+      margin-left: -3rem;
+    }
+  }
+
+  &--bottom {
+    float: right;
+    width: 5rem;
+  }
+
+  &--bottom-last {
+    float: right;
+    width: 8rem;
+
+    @include bp-medium {
+      margin-right: -3rem;
+    }
+  }
+}
