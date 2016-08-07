@@ -1,10 +1,10 @@
 {
   "generator-chisel": {
     "config": {
-      "name": "kazimierzpierzchala",
+      "name": "kp-website",
       "author": "thymikee",
-      "nameSlug": "kazimierzpierzchala",
-      "nameCamel": "Kazimierzpierzchala",
+      "nameSlug": "kp-website",
+      "nameCamel": "kpWebsite",
       "features": {
         "has_babel": true
       }

@@ -1,8 +1,8 @@
 {
-  "name": "kazimierzpierzchala",
+  "name": "kp-website",
   "version": "0.0.1",
   "author": "thymikee",
-  "description": "kazimierzpierzchala",
+  "description": "kp-website",
   "scripts": {
     "build": "gulp build"
   },
