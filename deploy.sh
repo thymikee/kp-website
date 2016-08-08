@@ -42,7 +42,7 @@ git config user.email "$COMMIT_AUTHOR_EMAIL"
 # If there are no changes to the compiled dist (e.g. this is a README update) then just bail.
 if git diff --quiet ; then
     echo "No changes to the output on this push; exiting."
-    exit 0
+    # exit 0
 fi
 
 # Commit the "changes", i.e. the new version.
