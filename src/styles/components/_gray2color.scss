@@ -1,0 +1,19 @@
+.gray2color {
+  display: block;
+
+  &:hover {
+    img {
+      opacity: 1;
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
+    }
+  }
+
+  img {
+    opacity: 0.3;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+    transition: opacity .3s,
+                filter .5s
+  }
+}

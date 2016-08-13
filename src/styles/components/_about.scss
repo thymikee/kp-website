@@ -2,6 +2,14 @@
   .icon-list {
     font-size: 2rem;
   }
+
+  .icon-list__item.u-oneliner {
+    font-size: 1.6rem;
+
+    @include bp-small {
+      font-size: 2rem;
+    }
+  }
 }
 
 .about__subheading {
