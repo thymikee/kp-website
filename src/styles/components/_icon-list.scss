@@ -20,6 +20,14 @@ $icon-list-line-height: 1.5;
 .icon-list__item {
   clear: both;
   overflow: hidden;
+
+  &--click {
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .icon-list__item__inner {

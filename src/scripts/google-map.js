@@ -1,5 +1,8 @@
 /* global google */
 import styles from './map-styles';
+import { places, bp } from './constants';
+import { forEach } from 'iterall';
+import smoothScroll from 'smooth-scroll';
 
 const mapSelector = document.querySelector('.map');
 
@@ -21,31 +24,40 @@ class GoogleMap {
 
     this.initMarkers();
     this.handleMapEvents();
+    this.setupPlaces();
   }
 
   initMarkers() {
-    new google.maps.Marker({
-      position: { lat: 50.0156477, lng: 21.9884377 },
-      title: "Biuro na Hetmańskiej 120",
-      map: this.map,
-    });
-
-    new google.maps.Marker({
-      position: { lat: 50.018363, lng: 22.0031903 },
-      title: "Biuro na Granicznej 4b LU-8",
-      map: this.map,
-    });
-
-    new google.maps.Marker({
-      position: { lat: 50.246927, lng: 21.7802773 },
-      title: "Biuro na Granicznej 4b LU-8",
-      map: this.map,
+    Object.keys(places).forEach(key => {
+      new google.maps.Marker({
+        position: places[key].position,
+        title: places[key].title,
+        map: this.map,
+      });
     });
   }
 
   handleMapEvents() {
     google.maps.event.addDomListener(window, 'resize', () => {
       this.map.setCenter(this.center);
+    });
+  }
+
+  setupPlaces() {
+    const placesTriggers = document.querySelectorAll('.js-places-trigger');
+
+    const handlePlaceClick = element => {
+      const placeId = element.getAttribute('data-places-id');
+      this.center = places[placeId].position;
+      this.map.setCenter(this.center);
+
+      if (window.innerWidth <= bp.medium) {
+        smoothScroll.animateScroll('#places-map', null, { offset: 100 })
+      }
+    };
+
+    forEach(placesTriggers, place => {
+      place.addEventListener('click', handlePlaceClick.bind(this, place), false);
     });
   }
 

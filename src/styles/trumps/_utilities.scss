@@ -35,4 +35,9 @@
 
 .u-simple-link {
   color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
