@@ -53,6 +53,8 @@ class GoogleMap {
 
       if (window.innerWidth <= bp.medium) {
         smoothScroll.animateScroll('#places-map', null, { offset: 100 })
+      } else {
+        smoothScroll.animateScroll('#places-map', null, { offset: 200 })
       }
     };
 
