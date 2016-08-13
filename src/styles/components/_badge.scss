@@ -15,6 +15,12 @@
   display: block;
   width: 100%;
   max-height: 100%;
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 97;
 }
 
 .badge__inner {
@@ -23,5 +29,5 @@
   left: 50%;
   width: 40%;
   max-height: 100%;
-  transform: translateX(-50%) translateY(-50%);;
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
 }
