@@ -15,6 +15,7 @@ class GoogleMap {
       center: this.center,
       scrollwheel: false,
       mapTypeControl: false,
+      streetViewControl: false,
       styles,
     });
 
