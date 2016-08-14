@@ -28,11 +28,17 @@ class GoogleMap {
   }
 
   initMarkers() {
+    const icon = {
+      url: 'assets/images/marker.png',
+      scaledSize: new google.maps.Size(21, 32),
+    };
+
     Object.keys(places).forEach(key => {
       new google.maps.Marker({
         position: places[key].position,
         title: places[key].title,
         map: this.map,
+        icon,
       });
     });
   }
