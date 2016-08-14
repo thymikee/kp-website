@@ -2,7 +2,9 @@ import smoothScroll from 'smooth-scroll';
 
 class SmoothScroll {
   constructor() {
-    smoothScroll.init();
+    smoothScroll.init({
+      offset: 30
+    });
   }
 }
 

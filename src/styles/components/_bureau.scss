@@ -16,6 +16,7 @@
   position: relative;
   overflow: hidden;
   margin: 1.5rem 0;
+  cursor: pointer;
 
   @include bp-medium {
     margin: 4rem 0;
@@ -36,24 +37,30 @@
     bottom: 0;
     opacity: 0.8;
     mix-blend-mode: color;
+    background: inherit;
+  }
+
+  &:hover {
+    > img {
+      opacity: 0.2;
+    }
+
+    .bureau__image__overlay {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   &--red {
-    &::after {
-      background: $color-red;
-    }
+    background: $color-red;
   }
 
   &--blue {
-    &::after {
-      background: $color-blue;
-    }
+    background: $color-blue;
   }
 
   &--navy {
-    &::after {
-      background: $color-navy;
-    }
+    background: $color-navy;
   }
 
   > img {
@@ -63,5 +70,26 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 1;
+    transition: opacity .2s;
   }
+}
+
+.bureau__image__overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity .2s,
+              visibility .2s;
 }

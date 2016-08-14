@@ -8,7 +8,6 @@ rules:
   curly: "error"
   no-eval: "error"
   no-floating-decimal: "error"
-  no-magic-numbers: "error"
   no-native-reassign: "error"
   no-octal: "error"
   no-redeclare: "error"
