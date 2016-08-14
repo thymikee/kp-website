@@ -58,9 +58,9 @@ class GoogleMap {
       this.map.setCenter(this.center);
 
       if (window.innerWidth <= bp.medium) {
-        smoothScroll.animateScroll('#places-map', null, { offset: 100 })
+        smoothScroll.animateScroll('#places-map', null, { offset: 100, updateURL: false })
       } else {
-        smoothScroll.animateScroll('#places-map', null, { offset: 200 })
+        smoothScroll.animateScroll('#places-map', null, { offset: 200, updateURL: false })
       }
     };
 
