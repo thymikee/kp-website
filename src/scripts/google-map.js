@@ -8,8 +8,9 @@ const mapSelector = document.querySelector('.map');
 
 class GoogleMap {
   constructor() {
+    this.scrollListener = this.scrollListener.bind(this);
     this.center = { lat: 50.0171531, lng: 21.997 };
-    this.exportMapCallback();
+    this.loadScript();
   }
 
   initGoogleMap() {
@@ -69,8 +70,31 @@ class GoogleMap {
     });
   }
 
-  exportMapCallback() {
-    window.initMap = this.initGoogleMap.bind(this);
+  loadScript() {
+    const mapTrigger = document.querySelector('.places__list');
+    this.mapTriggerOffsetTop = mapTrigger.offsetTop;
+    this.windowHeight = window.innerHeight;
+
+    window.addEventListener('resize', () => {
+      this.mapTriggerOffsetTop = mapTrigger.offsetTop;
+      this.windowHeight = window.innerHeight;
+    });
+
+    window.addEventListener('scroll', this.scrollListener);
+  }
+
+  scrollListener() {
+    const documentScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (this.windowHeight + documentScrollTop > this.mapTriggerOffsetTop) {
+      window.removeEventListener('scroll', this.scrollListener);
+      window.initMap = this.initGoogleMap.bind(this);
+
+      let script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBO-71BQKVYtvqPhnRlo3zZ05NUlp62sw4&callback=initMap';
+      document.body.appendChild(script);
+    }
   }
 }
 
