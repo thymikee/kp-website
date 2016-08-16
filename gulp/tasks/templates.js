@@ -28,12 +28,12 @@ var templatesTask = function (gulp, plugins, config, helpers) {
   }
 
   gulp.task('templates-watch', function() {
-    templates();
+    return templates();
   });
 
-  gulp.task('templates-build', ['scripts-build', 'critical'], function() {
+  gulp.task('templates-build', ['scripts-build'], function() {
     var manifest = JSON.parse(fs.readFileSync(config.dest.revManifest, 'utf8'));
-    templates(manifest);
+    return templates(manifest);
   });
 };
 
