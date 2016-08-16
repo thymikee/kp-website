@@ -57,6 +57,13 @@
     display: inline-block;
     margin: 0 1rem;
 
+    &::before {
+      content: "✔";
+      font-size: 0.6em;
+      margin-right: 0.6em;
+      -webkit-font-smoothing: antialiased;
+    }
+
     @include bp-medium {
       margin: 0;
       display: block;
