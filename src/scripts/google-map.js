@@ -55,14 +55,13 @@ class GoogleMap {
 
     const handlePlaceClick = element => {
       const placeId = element.getAttribute('data-places-id');
+      const scrollOffset = window.innerWidth <= bp.medium ? 100 : 200;
       this.center = places[placeId].position;
       this.map.setCenter(this.center);
 
-      if (window.innerWidth <= bp.medium) {
-        smoothScroll.animateScroll('#places-map', null, { offset: 100, updateURL: false })
-      } else {
-        smoothScroll.animateScroll('#places-map', null, { offset: 200, updateURL: false })
-      }
+      smoothScroll.animateScroll('#places-map', null, {
+        offset: scrollOffset, updateURL: false
+      });
     };
 
     forEach(placesTriggers, place => {

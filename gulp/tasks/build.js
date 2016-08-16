@@ -6,7 +6,8 @@ var buildTask = function (gulp, plugins, config) {
     return plugins.del([config.dest.base]);
   });
 
-  gulp.task('build', ['templates-build']);
+  gulp.task('build-critical', ['critical']);
+  gulp.task('build', ['build-critical']);
 };
 
 module.exports = buildTask;
