@@ -3,7 +3,7 @@ var critical = require('critical');
 
 var criticalTask = function (gulp, plugins, config) {
   // Generate & Inline Critical-path CSS
-  gulp.task('critical', ['templates-build'], function () {
+  gulp.task('critical', function () {
     critical.generate({
       inline: true,
       minify: true,
