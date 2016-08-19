@@ -1,6 +1,6 @@
 #!/bin/bash
 # Based on domenic's tutorial: https://gist.github.com/domenic/ec8b0fc8ab45f39403dd
-set -e # Exit with nonzero exit code if anything fails
+set -ev # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
@@ -38,12 +38,6 @@ doCompile
 cd dist
 git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
-
-# If there are no changes to the compiled dist (e.g. this is a README update) then just bail.
-if git diff --quiet ; then
-    echo "No changes to the output on this push; exiting."
-    # exit 0
-fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.

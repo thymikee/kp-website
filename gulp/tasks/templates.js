@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs');
+var gutil = require('gulp-util');
 
 var templatesTask = function (gulp, plugins, config, helpers) {
 
@@ -20,6 +21,7 @@ var templatesTask = function (gulp, plugins, config, helpers) {
             }
           }
         ],
+        data: { __DEV__: gutil.env.dev },
         errorLogToConsole: true
       }))
       .pipe(plugins.prettify({ indent_size: 2, preserve_newlines: true }))
