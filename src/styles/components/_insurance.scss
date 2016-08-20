@@ -8,7 +8,6 @@
 }
 
 .insurance__container {
-
   @include bp-medium {
     font-size: 2rem;
   }
@@ -33,8 +32,15 @@
 .insurance__content {
   flex: 1 1 55%;
 
+  @include bp-medium {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   > .heading {
     text-align: center;
+    flex: 1 0 100%;
 
     @include bp-medium {
       text-align: left;
@@ -48,13 +54,12 @@
   list-style: none;
 
   @include bp-medium {
-    margin: 0;
+    margin: 0 0 2rem;
     float: left;
     text-align: left;
   }
 
   > li {
-    display: inline-block;
     margin: 0 1rem;
 
     &::before {
@@ -66,7 +71,6 @@
 
     @include bp-medium {
       margin: 0;
-      display: block;
     }
   }
 }
