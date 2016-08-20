@@ -23,6 +23,7 @@ $a-stroke-time: 1s;
   font-size: 2.4rem;
   line-height: 1.15;
   word-break: break-word;
+  margin: 0;
 
   @include bp-medium {
     font-size: 3.2rem;
