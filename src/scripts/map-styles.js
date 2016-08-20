@@ -1,5 +1,14 @@
 const styles = [
   {
+    "featureType": "all",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
     "featureType": "administrative",
     "elementType": "labels.text.fill",
     "stylers": [
@@ -64,7 +73,7 @@ const styles = [
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#ffffff"
+        "color": "#fdfdfd"
       }
     ]
   },
