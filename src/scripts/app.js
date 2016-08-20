@@ -5,6 +5,8 @@
 
 import GoogleMap from './google-map';
 import SmoothScroll from './smooth-scroll';
+import Rotator from './rotator';
 
-new GoogleMap();
 new SmoothScroll();
+new GoogleMap();
+new Rotator();

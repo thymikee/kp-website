@@ -72,3 +72,26 @@ $a-stroke-time: 1s;
     }
   }
 }
+
+.hero__rotator {
+  display: block;
+  color: $color-blue;
+  overflow: hidden;
+
+  @include bp-large {
+    display: inline;
+  }
+
+  > span {
+    // display: none;
+    position: absolute;
+    opacity: 0;
+    transition: opacity .15s;
+
+    &.is-active {
+      position: static;
+      opacity: 1;
+      // display: inline;
+    }
+  }
+}
