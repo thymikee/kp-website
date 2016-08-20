@@ -83,15 +83,16 @@ $a-stroke-time: 1s;
   }
 
   > span {
-    // display: none;
     position: absolute;
     opacity: 0;
-    transition: opacity .15s;
+
+    @include bp-large {
+      transition: opacity .1s;
+    }
 
     &.is-active {
       position: static;
       opacity: 1;
-      // display: inline;
     }
   }
 }
