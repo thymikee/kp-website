@@ -4,7 +4,7 @@ const select = {
   final: '.js-rotator__final',
 }
 
-const defaultTimeout = 300;
+const defaultTimeout = 400;
 
 class Rotator {
   constructor() {

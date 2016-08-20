@@ -1,4 +1,4 @@
-$a-stroke-delay: 0.3s;
+$a-stroke-delay: 1.5s;
 $a-stroke-time: 1s;
 
 .hero {
@@ -33,6 +33,11 @@ $a-stroke-time: 1s;
 .hero__badges {
   display: flex;
   justify-content: center;
+  margin-top: 5rem;
+
+  @include bp-medium {
+    margin-top: 0;
+  }
 
   .badge {
     margin: 0 1rem;
@@ -77,6 +82,7 @@ $a-stroke-time: 1s;
   display: block;
   color: $color-blue;
   overflow: hidden;
+  min-height: $line-height * 1em;
 
   @include bp-large {
     display: inline;
@@ -87,7 +93,7 @@ $a-stroke-time: 1s;
     opacity: 0;
 
     @include bp-large {
-      transition: opacity .1s;
+      transition: opacity .15s;
     }
 
     &.is-active {
