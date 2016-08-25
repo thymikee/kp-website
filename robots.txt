@@ -1,0 +1,6 @@
+User-Agent: *
+Disallow:
+Disallow: /partials
+Disallow: /template.html
+
+Sitemap: http://ubezpieczenia-kolbuszowa.pl/sitemap.xml
