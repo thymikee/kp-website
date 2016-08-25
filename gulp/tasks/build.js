@@ -7,7 +7,7 @@ var buildTask = function (gulp, plugins, config) {
   });
 
   gulp.task('build-critical', ['critical']);
-  gulp.task('build', ['build-critical']);
+  gulp.task('build', ['build-critical', 'copy']);
 };
 
 module.exports = buildTask;
