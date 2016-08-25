@@ -1,0 +1,13 @@
+.footer-secondary {
+  background: $color-gray-lightest;
+  padding: 5rem 0;
+  margin: 5rem 0;
+
+  .insurance__happy {
+    margin-bottom: 2rem;
+
+    @include bp-medium {
+      margin-bottom: 0;
+    }
+  }
+}

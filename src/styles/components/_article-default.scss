@@ -1,0 +1,19 @@
+.article-default {
+  margin-top: 3rem;
+
+  @include bp-medium {
+    margin-top: 7rem;
+  }
+}
+
+.article-default__side-media {
+  height: 100px;
+
+  @include bp-small {
+    height: 150px;
+  }
+
+  @include bp-medium {
+    height: auto;
+  }
+}

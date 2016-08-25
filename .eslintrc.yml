@@ -13,7 +13,6 @@ rules:
   no-redeclare: "error"
   no-unused-vars: "error"
   block-spacing: "error"
-  brace-style: "error"
   comma-style: ["error", "last"]
   consistent-this: ["error", "that"]
   eol-last: "error"

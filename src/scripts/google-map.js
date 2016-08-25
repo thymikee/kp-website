@@ -10,6 +10,9 @@ class GoogleMap {
   constructor() {
     this.scrollListener = this.scrollListener.bind(this);
     this.center = { lat: 50.0171531, lng: 21.997 };
+
+    if (!mapSelector) { return; }
+
     this.scheduleMapLoading();
   }
 

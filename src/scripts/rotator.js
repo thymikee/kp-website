@@ -13,6 +13,9 @@ class Rotator {
 
   initRotator() {
     const rotator = document.querySelector(select.root);
+
+    if (!rotator) { return; }
+
     const rotatorItems = rotator.querySelectorAll(select.item);
     const rotatorFinal = rotator.querySelector(select.final);
     const [min, max] = [0, rotatorItems.length];

@@ -1,0 +1,54 @@
+{% extends "base.twig" %}
+{% set pageName = 'Ubezpieczenia Samochodu – Agencja Ubezpieczeniowa Kazimierz Pierzchała' %}
+
+{% block content %}
+  <article class="article-default container">
+    <div class="two-col">
+      <aside class="two-col__column">
+        <img
+          class="article-default__side-media"
+          src="assets/images/car.jpg"
+          srcset="assets/images/car.jpg 1x, assets/images/car@2x.jpg 2x"
+          alt="Ubezpieczenie samochodu" />
+      </aside>
+      <div class="two-col__column">
+        <h1 class="heading heading--lg">Ubezpieczenia Samochodu</h1>
+        {% include "partials/dots.twig" %}
+        <div class="entry-content">
+          <p>
+            Ubezpieczenia majątkowe obejmują ochronę ryzyk osób podróżujących pojazdami mechanicznymi.
+            Oferujemy obowiązkowe ubezpieczenia OC i dobrowolne ubezpieczenia (np. autocasco):
+          </p>
+
+          <ul>
+            <li>OC (Odpowiedzialności Cywilnej)</li>
+            <li>AC (autocasco) </li>
+            <li>NNW (Następstwa Nieszczęśliwych Wypadków)</li>
+            <li>Assistance</li>
+            <li>Ubezpieczenia komunikacyjne dla firm</li>
+            <li>OC przewoźnika i spedytora w kraju i za granicą</li>
+            <li>Towarów przewożonych w ruchu krajowym i zagranicznym (cargo)</li>
+          </ul>
+
+          <a href="/">
+            <small>&#10094; &nbsp;
+              <span class="u-color-blue">Powrót do strony głównej</span>
+            </small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <section class="footer-secondary">
+    <div class="container">
+      <div class="two-col two-col--v-center">
+        <div class="two-col__column">
+          {% include 'partials/insurance-happy.twig' %}
+        </div>
+        <div class="two-col__column">
+          {% include 'partials/ask-question.twig' %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
