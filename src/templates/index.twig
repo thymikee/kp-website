@@ -1,11 +1,11 @@
 {% extends "base.twig" %}
-{% set pageName = 'Landing' %}
+{% set pageName = 'Agencja Ubezpieczeniowa Kazimierz Pierzchała – Ubezpieczenia Kolbuszowa, Rzeszów' %}
 
 {% block content %}
   {% include "partials/hero.twig" %}
-  {% include "partials/dots.twig" %}
+  {% include "partials/dots.twig" with { isSeparator: true } %}
   {% include "partials/insurance.twig" %}
   {% include "partials/places.twig" %}
   {% include "partials/about.twig" %}
-  {% include "partials/dots.twig" %}
+  {% include "partials/dots.twig" with { isSeparator: true } %}
 {% endblock %}

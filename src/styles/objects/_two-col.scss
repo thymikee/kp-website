@@ -1,11 +1,26 @@
 .two-col {
   @include clearfix;
+
+  &--v-center {
+    @include bp-medium {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: none;
+      }
+    }
+  }
 }
 
 .two-col__column {
+  clear: both;
+  float: left;
+
   @include bp-medium {
     width: 50%;
     float: left;
+    clear: none;
     padding: 0 4rem;
   }
 }

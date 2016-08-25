@@ -1,8 +1,12 @@
 .dots {
   clear: both;
-  margin: 8rem auto;
   display: flex;
-  justify-content: center;
+  margin: 1rem 0 2rem;
+
+  &--is-separator {
+    margin: 8rem auto;
+    justify-content: center;
+  }
 }
 
 .dots__item {

@@ -13,6 +13,10 @@ $icon-list-line-height: 1.5;
   &--spread {
     .icon-list__item {
       margin: 1.5rem 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
