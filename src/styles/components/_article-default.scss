@@ -8,6 +8,7 @@
 
 .article-default__side-media {
   height: 100px;
+  width: 100%;
 
   @include bp-small {
     height: 150px;
@@ -15,5 +16,6 @@
 
   @include bp-medium {
     height: auto;
+    width: 100%;
   }
 }
