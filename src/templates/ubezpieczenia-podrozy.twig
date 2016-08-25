@@ -1,0 +1,47 @@
+{% extends "base.twig" %}
+{% set pageName = 'Ubezpieczenia Podróży – Agencja Ubezpieczeniowa Kazimierz Pierzchała' %}
+{% set pageDescription = "Ubezpieczenia podróży. Przedstawiamy oferty towarzystw: Ergo Hestia, Warta, HDI, Compensa, Allianz, Generali" %}
+{% set fbUrl = pageUrl ~ "/ubezpieczenia-podrozy" %}
+{% set fbImage = pageUrl ~ "/assets/images/podroze_1200x630.jpg" %}
+{% set fbType = "article" %}
+{% set fbTitle = pageName %}
+{% set fbDescription = pageDescription %}
+
+{% block content %}
+  <article class="article-default container">
+    <div class="two-col">
+      <aside class="two-col__column">
+        <img
+          class="article-default__side-media"
+          src="assets/images/podroz.jpg"
+          srcset="assets/images/podroz.jpg 1x, assets/images/podroz@2x.jpg 2x"
+          alt="Ubezpieczenie samochodu" />
+      </aside>
+      <div class="two-col__column">
+        <h1 class="heading heading--lg">Ubezpieczenia Podróży</h1>
+        {% include "partials/dots.twig" %}
+        <div class="entry-content">
+
+
+          <a href="/">
+            <small>&#10094; &nbsp;
+              <span class="u-color-blue">Powrót do strony głównej</span>
+            </small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  <section class="footer-secondary">
+    <div class="container">
+      <div class="two-col two-col--v-center">
+        <div class="two-col__column">
+          {% include 'partials/insurance-happy.twig' %}
+        </div>
+        <div class="two-col__column">
+          {% include 'partials/ask-question.twig' %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -1,9 +1,16 @@
+{% set pageUrl = 'http://ubezpieczenia-kolbuszowa.pl' %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en" prefix="og: http://ogp.me/ns#">
 <head>
   <meta charset="utf-8" >
-  <meta name="description" content="Pośrednictwo Ubezpieczeniowe Kazimierz Pierzchała, oddziały w Kolbuszowej i w Rzeszowie. Ubezpieczenia Ergo Hestia, Warta, HDI, Compensa Allianz" >
+  <meta name="description" content="{{description}}" >
   <meta name="author" content="Michał Pierzchała <thymikee@gmail.com>" >
+  <meta property="og:url" content="{{fbUrl}}" />
+  <meta property="og:type" content="{{fbType}}" />
+  <meta property="og:title" content="{{fbTitle}}" />
+  <meta property="og:description" content="{{fbDescription}}" />
+  <meta property="og:image" content="{{fbImage}}" />
   <title>{{ pageName }}</title>
   <link rel="stylesheet" property="stylesheet" href="styles/{{ assetPath('main.css') }}" type="text/css" media="screen">
   <link rel="icon" type="image/png" href="assets/images/favicon.png" >

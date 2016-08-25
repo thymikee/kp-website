@@ -1,5 +1,11 @@
 {% extends "base.twig" %}
 {% set pageName = 'Ubezpieczenia Samochodu – Agencja Ubezpieczeniowa Kazimierz Pierzchała' %}
+{% set pageDescription = "Ubezpieczenia AC, OC, NNW, Assistance, dla firm, cargo. Przedstawiamy oferty towarzystw: Ergo Hestia, Warta, HDI, Compensa, Allianz, Generali" %}
+{% set fbUrl = pageUrl ~ "/ubezpieczenia-samochodu" %}
+{% set fbImage = pageUrl ~ "/assets/images/samochod_1200x630.jpg" %}
+{% set fbType = "article" %}
+{% set fbTitle = pageName %}
+{% set fbDescription = pageDescription %}
 
 {% block content %}
   <article class="article-default container">
@@ -7,8 +13,8 @@
       <aside class="two-col__column">
         <img
           class="article-default__side-media"
-          src="assets/images/car.jpg"
-          srcset="assets/images/car.jpg 1x, assets/images/car@2x.jpg 2x"
+          src="assets/images/samochod.jpg"
+          srcset="assets/images/samochod.jpg 1x, assets/images/samochod@2x.jpg 2x"
           alt="Ubezpieczenie samochodu" />
       </aside>
       <div class="two-col__column">
