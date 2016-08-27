@@ -19,5 +19,3 @@ export const bp = {
   large: 1024,
   full: 1600,
 };
-
-export const IMAGES_PATH = window.IMAGES_PATH;
