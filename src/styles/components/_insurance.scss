@@ -55,13 +55,13 @@
   list-style: none;
 
   @include bp-medium {
-    margin: 0 0 2rem;
+    margin: 0 1rem 2rem;
     float: left;
     text-align: left;
   }
 
   > li {
-    margin: 0 1rem;
+    margin: 0.5rem 0;
 
     &::before {
       content: "✔";
@@ -72,6 +72,15 @@
 
     @include bp-medium {
       margin: 0;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 0;
+
+    @include bp-medium {
+      padding: 0;
     }
   }
 }
