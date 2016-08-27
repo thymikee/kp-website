@@ -1,26 +1,27 @@
 /* global google */
 import styles from './map-styles';
 import { places, bp } from './constants';
+import { applyPassive, requestIdleCallback } from './utils';
 import { forEach } from 'iterall';
 import smoothScroll from 'smooth-scroll';
 
-const mapSelector = document.querySelector('.map');
-
 class GoogleMap {
   constructor() {
+    this.mapElement = document.querySelector('.js-google-map');
     this.scrollListener = this.scrollListener.bind(this);
     this.center = { lat: 50.0171531, lng: 21.997 };
 
-    if (!mapSelector) { return; }
+    if (!this.mapElement) { return; }
 
     this.scheduleMapLoading();
   }
 
   initGoogleMap() {
-    this.map = new google.maps.Map(mapSelector, {
+    this.map = new google.maps.Map(this.mapElement, {
       zoom: 15,
       center: this.center,
       scrollwheel: false,
+      draggable: window.innerWidth >= bp.large,
       mapTypeControl: false,
       streetViewControl: false,
       styles,
@@ -47,12 +48,6 @@ class GoogleMap {
     });
   }
 
-  handleMapEvents() {
-    google.maps.event.addDomListener(window, 'resize', () => {
-      this.map.setCenter(this.center);
-    });
-  }
-
   setupPlaces() {
     const placesTriggers = document.querySelectorAll('.js-places-trigger');
 
@@ -75,7 +70,18 @@ class GoogleMap {
   scheduleMapLoading() {
     this.handleResize();
 
-    window.addEventListener('scroll', this.scrollListener);
+    window.addEventListener('scroll', this.scrollListener, applyPassive());
+  }
+
+  handleMapEvents() {
+    google.maps.event.addDomListener(window, 'resize', () => {
+      this.map.setCenter(this.center);
+      this.map.setOptions({ draggable: window.innerWidth >= bp.large })
+    });
+
+    google.maps.event.addDomListener(window, 'click', () => {
+      this.map.setOptions({ draggable: true });
+    });
   }
 
   handleResize() {
@@ -104,7 +110,7 @@ class GoogleMap {
     let script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBO-71BQKVYtvqPhnRlo3zZ05NUlp62sw4&callback=initMap';
-    document.body.appendChild(script);
+    requestIdleCallback(() => document.body.appendChild(script));
   }
 }
 

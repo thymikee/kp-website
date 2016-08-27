@@ -16,6 +16,7 @@
 .two-col__column {
   clear: both;
   float: left;
+  max-width: 100%;
 
   @include bp-medium {
     width: 50%;

@@ -3,4 +3,26 @@
   margin: 7rem 0;
   height: 250px;
   width: 100%;
+  text-align: center;
+}
+
+.map__placeholder {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.map__message {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 0.75em;
+  line-height: 2;
+
+  @include bp-large {
+    display: none;
+  }
 }
