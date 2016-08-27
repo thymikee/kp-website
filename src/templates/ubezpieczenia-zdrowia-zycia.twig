@@ -2,7 +2,7 @@
 {% set pageName = 'Ubezpieczenia Zdrowia i Życia – Agencja Ubezpieczeniowa Kazimierz Pierzchała' %}
 {% set pageDescription = "Ubezpieczenia zdrowia i życia. Przedstawiamy oferty towarzystw: Ergo Hestia, Warta, HDI, Compensa, Allianz, Generali" %}
 {% set fbUrl = pageUrl ~ "/ubezpieczenia-zdrowia-zycia" %}
-{% set fbImage = pageUrl ~ "/assets/images/zycie_1200x630.jpg" %}
+{% set fbImage = assetsUrl ~ "/" ~ assetPath('images/zycie_1200x630.jpg') %}
 {% set fbType = "article" %}
 {% set fbTitle = pageName %}
 {% set fbDescription = pageDescription %}
@@ -13,8 +13,8 @@
       <aside class="two-col__column">
         <img
           class="article-default__side-media"
-          src="assets/images/zycie.jpg"
-          srcset="assets/images/zycie.jpg 1x, assets/images/zycie@2x.jpg 2x"
+          src="{{assetsUrl}}/{{ assetPath('images/zycie.jpg') }}"
+          srcset="{{assetsUrl}}/{{ assetPath('images/zycie@2x.jpg') }} 2x"
           alt="Ubezpieczenie samochodu" />
       </aside>
       <div class="two-col__column">

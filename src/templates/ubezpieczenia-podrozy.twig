@@ -2,7 +2,7 @@
 {% set pageName = 'Ubezpieczenia Podróży – Agencja Ubezpieczeniowa Kazimierz Pierzchała' %}
 {% set pageDescription = "Ubezpieczenia podróży. Przedstawiamy oferty towarzystw: Ergo Hestia, Warta, HDI, Compensa, Allianz, Generali" %}
 {% set fbUrl = pageUrl ~ "/ubezpieczenia-podrozy" %}
-{% set fbImage = pageUrl ~ "/assets/images/podroze_1200x630.jpg" %}
+{% set fbImage = assetsUrl ~ "/" ~ assetPath('images/podroze_1200x630.jpg') %}
 {% set fbType = "article" %}
 {% set fbTitle = pageName %}
 {% set fbDescription = pageDescription %}
@@ -13,8 +13,8 @@
       <aside class="two-col__column">
         <img
           class="article-default__side-media"
-          src="assets/images/podroze.jpg"
-          srcset="assets/images/podroze.jpg 1x, assets/images/podroze@2x.jpg 2x"
+          src="{{assetsUrl}}/{{ assetPath('images/podroze.jpg') }}"
+          srcset="{{assetsUrl}}/{{ assetPath('images/podroze@2x.jpg') }} 2x"
           alt="Ubezpieczenie samochodu" />
       </aside>
       <div class="two-col__column">

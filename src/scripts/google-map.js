@@ -8,11 +8,11 @@ import smoothScroll from 'smooth-scroll';
 class GoogleMap {
   constructor() {
     this.mapElement = document.querySelector('.js-google-map');
-    this.scrollListener = this.scrollListener.bind(this);
-    this.center = { lat: 50.0171531, lng: 21.997 };
 
     if (!this.mapElement) { return; }
 
+    this.scrollListener = this.scrollListener.bind(this);
+    this.center = { lat: 50.0171531, lng: 21.997 };
     this.scheduleMapLoading();
   }
 
@@ -34,7 +34,7 @@ class GoogleMap {
 
   initMarkers() {
     const icon = {
-      url: 'assets/images/marker.png',
+      url: this.mapElement.getAttribute('data-marker'),
       scaledSize: new google.maps.Size(21, 32),
     };
 

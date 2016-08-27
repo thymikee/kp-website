@@ -1,4 +1,9 @@
+<script>
+  window.IMAGES_PATH = "{{assetsUrl}}"
+</script>
+
 <script src="scripts/{{ assetPath('bundle.js') }}"></script>
+
 {% if __DEV__ == true %}
   <script>
     window.ga = function() { console.log(arguments); }
@@ -14,14 +19,15 @@
     ga('send', 'pageview');
   </script>
 {% endif %}
+
 <script type="application/ld+json">
 {
   "@context": "http://www.schema.org",
   "@type": "InsuranceAgency",
   "name": "Agencja Ubezpieczeniowa Kazimierz Pierzchała",
   "url": "http://ubezpieczenia-kolbuszowa.pl",
-  "logo": "http://ubezpieczenia-kolbuszowa.pl/assets/images/logo.svg",
-  "image": "http://ubezpieczenia-kolbuszowa.pl/assets/images/logo.svg",
+  "logo": "{{assetsUrl}}/{{ assetPath('images/logo.svg') }}",
+  "image": "{{assetsUrl}}/{{ assetPath('images/logo.svg') }}",
   "description": "Pośrednictwo Ubezpieczeniowe Kazimierz Pierzchała, oddziały w Kolbuszowej i w Rzeszowie. Ubezpieczenia domu / mieszkania, samochodowe, podróży, zdrowia i życia, biznesu Ergo Hestia, Warta, HDI, Compensa Allianz",
   "address": {
     "@type": "PostalAddress",

@@ -8,8 +8,8 @@
           <h3 class="bureau__title heading heading--md"><span class="u-color-red">1. </span>Kolbuszowa</h3>
           <div class="bureau__image bureau__image--red js-places-trigger" data-places-id="kolbuszowa">
             <img
-              src="assets/images/kolbuszowa.jpg"
-              srcset="assets/images/kolbuszowa.jpg 1x, assets/images/kolbuszowa@2x.jpg"
+              src="{{assetsUrl}}/{{ assetPath('images/kolbuszowa.jpg') }}"
+              srcset="{{assetsUrl}}/{{ assetPath('images/kolbuszowa@2x.jpg') }} 2x"
               alt="Biuro Kolbuszowa – Kazimierz Pierzchała" />
             <span class="bureau__image__overlay">Zobacz na mapie</span>
           </div>
@@ -35,8 +35,8 @@
         <div class="bureau">
           <div class="bureau__image bureau__image--blue js-places-trigger" data-places-id="rzeszow_graniczna">
             <img
-              src="assets/images/rzeszow1.jpg"
-              srcset="assets/images/rzeszow1.jpg 1x, assets/images/rzeszow1@2x.jpg 2x"
+              src="{{assetsUrl}}/{{ assetPath('images/rzeszow1.jpg') }}"
+              srcset="{{assetsUrl}}/{{ assetPath('images/rzeszow1@2x.jpg') }} 2x"
               alt="Biuro Rzeszów Graniczna – Kazimierz Pierzchała" />
             <span class="bureau__image__overlay">Zobacz na mapie</span>
           </div>
@@ -62,8 +62,8 @@
         <div class="bureau">
           <div class="bureau__image bureau__image--navy js-places-trigger" data-places-id="rzeszow_hetmanska">
             <img
-              src="assets/images/rzeszow2.jpg"
-              srcset="assets/images/rzeszow2.jpg 1x, assets/images/rzeszow2@2x.jpg"
+              src="{{assetsUrl}}/{{ assetPath('images/rzeszow2.jpg') }}"
+              srcset="{{assetsUrl}}/{{ assetPath('images/rzeszow2@2x.jpg') }} 2x"
               alt="Biuro Rzeszów Hetmańska – Kazimierz Pierzchała" />
             <span class="bureau__image__overlay">Zobacz na mapie</span>
           </div>
@@ -90,5 +90,5 @@
 
 <div class="map" id="places-map">
   <p class="map__message js-google-map-message">Dotknij mapy, aby umożliwić nawigację</p>
-  <div class="js-google-map map__placeholder"></div>
+  <div class="js-google-map map__placeholder" data-marker="{{assetsUrl}}/{{ assetPath('images/marker.png') }}"></div>
 </div>

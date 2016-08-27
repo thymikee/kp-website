@@ -2,7 +2,7 @@
 {% set pageName = 'Ubezpieczenia Biznesu – Agencja Ubezpieczeniowa Kazimierz Pierzchała' %}
 {% set pageDescription = "Ubezpieczenia biznesu. Przedstawiamy oferty towarzystw: Ergo Hestia, Warta, HDI, Compensa, Allianz, Generali" %}
 {% set fbUrl = pageUrl ~ "/ubezpieczenia-biznesu" %}
-{% set fbImage = pageUrl ~ "/assets/images/biznes_1200x630.jpg" %}
+{% set fbImage = assetsUrl ~ "/" ~ assetPath('images/biznes_1200x630.jpg') %}
 {% set fbType = "article" %}
 {% set fbTitle = pageName %}
 {% set fbDescription = pageDescription %}
@@ -13,8 +13,8 @@
       <aside class="two-col__column">
         <img
           class="article-default__side-media"
-          src="assets/images/biznes.jpg"
-          srcset="assets/images/biznes.jpg 1x, assets/images/biznes@2x.jpg 2x"
+          src="{{assetsUrl}}/{{ assetPath('images/biznes.jpg') }}"
+          srcset="{{assetsUrl}}/{{ assetPath('images/biznes@2x.jpg') }} 2x"
           alt="Ubezpieczenie samochodu" />
       </aside>
       <div class="two-col__column">
