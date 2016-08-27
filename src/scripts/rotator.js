@@ -9,15 +9,15 @@ const TIMEOUT = 400; //time in ms between each rotation
 class Rotator {
   constructor() {
     this.rotator = document.querySelector(classNames.root);
+
+    if (!this.rotator) { return; }
+
     this.rotatorItems = this.rotator.querySelectorAll(classNames.item);
     this.rotatorFinal = this.rotator.querySelector(classNames.final);
-
     this.initRotator();
   }
 
   initRotator() {
-    if (!this.rotator) { return; }
-
     const [min, max] = [0, this.rotatorItems.length];
     const initial = min;
 
