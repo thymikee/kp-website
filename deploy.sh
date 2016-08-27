@@ -6,7 +6,7 @@ SOURCE_BRANCH="master"
 TARGET_BRANCH="gh-pages"
 
 function doCompile {
-  gulp build
+  gulp build --production
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify

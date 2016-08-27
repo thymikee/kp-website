@@ -21,7 +21,7 @@ var templatesTask = function (gulp, plugins, config, helpers) {
             }
           }
         ],
-        data: { __DEV__: gutil.env.dev },
+        data: { __DEV__: !gutil.env.production },
         errorLogToConsole: true
       }))
       .pipe(plugins.prettify({ indent_size: 2, preserve_newlines: true }))
