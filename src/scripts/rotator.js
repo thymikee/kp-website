@@ -1,50 +1,47 @@
-const select = {
+const classNames = {
   root: '.js-rotator',
   item: '.js-rotator__item',
   final: '.js-rotator__final',
 }
 
-const defaultTimeout = 400;
+const TIMEOUT = 400; //time in ms between each rotation
 
 class Rotator {
   constructor() {
+    this.rotator = document.querySelector(classNames.root);
+    this.rotatorItems = this.rotator.querySelectorAll(classNames.item);
+    this.rotatorFinal = this.rotator.querySelector(classNames.final);
+
     this.initRotator();
   }
 
   initRotator() {
-    const rotator = document.querySelector(select.root);
+    if (!this.rotator) { return; }
 
-    if (!rotator) { return; }
+    const [min, max] = [0, this.rotatorItems.length];
+    const initial = min;
 
-    const rotatorItems = rotator.querySelectorAll(select.item);
-    const rotatorFinal = rotator.querySelector(select.final);
-    const [min, max] = [0, rotatorItems.length];
-    let currentItemNo = 0;
+    this.autoRotate(initial, min, max);
+  }
 
-    const autoPlay = setInterval(() => {
-      if (currentItemNo - 1 >= min) {
-        this.deactivate(rotatorItems[currentItemNo - 1]);
-      }
+  autoRotate(current, start, stop) {
+    this.deactivate(this.rotatorItems[current - 1]);
+    this.activate(this.rotatorItems[current]);
 
-      if (currentItemNo < max) {
-        this.activate(rotatorItems[currentItemNo]);
-      }
+    if (current === stop) {
+      this.activate(this.rotatorFinal);
+      return;
+    }
 
-      if (currentItemNo === max) {
-        clearInterval(autoPlay);
-        this.activate(rotatorFinal);
-      }
-
-      currentItemNo++;
-    }, defaultTimeout);
+    setTimeout(this.autoRotate.bind(this, current + 1, start, stop), TIMEOUT);
   }
 
   activate(node) {
-    node.classList.add('is-active');
+    node && node.classList.add('is-active');
   }
 
   deactivate(node) {
-    node.classList.remove('is-active');
+    node && node.classList.remove('is-active');
   }
 }
 
