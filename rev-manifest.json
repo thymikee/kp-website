@@ -2,7 +2,7 @@
   "bundle.js": "bundle-8defd9fd95.js",
   "bundle.js.map": "bundle-b6f0a9640e.js.map",
   "critical.css": "critical-26e1994037.css",
-  "critical.css.map": "critical-f56671a544.css.map",
+  "critical.css.map": "critical-eb5c93f44b.css.map",
   "images/biznes.jpg": "images/biznes-bec41e3c2a.jpg",
   "images/biznes@2x.jpg": "images/biznes@2x-8c74d03648.jpg",
   "images/biznes_1200x630.jpg": "images/biznes_1200x630-1b8b90c690.jpg",
@@ -37,6 +37,6 @@
   "images/zycie.jpg": "images/zycie-18333db55a.jpg",
   "images/zycie@2x.jpg": "images/zycie@2x-83031615cc.jpg",
   "images/zycie_1200x630.jpg": "images/zycie_1200x630-9767f9e286.jpg",
-  "main.css": "main-5e88087376.css",
-  "main.css.map": "main-23e604c7ee.css.map"
+  "main.css": "main-b6f9b82a3d.css",
+  "main.css.map": "main-07ec3a7be1.css.map"
 }
