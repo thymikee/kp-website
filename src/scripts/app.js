@@ -1,5 +1,5 @@
 /*
-  Project: kazimierzpierzchala
+  Project: kp-website
   Author: thymikee
  */
 
