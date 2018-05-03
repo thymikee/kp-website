@@ -109,7 +109,7 @@ class GoogleMap {
     window.initMap = this.initGoogleMap.bind(this);
     let script = document.createElement('script');
     script.type = 'text/javascript';
-    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBO-71BQKVYtvqPhnRlo3zZ05NUlp62sw4&callback=initMap';
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA8mNjxc1yaGiEMBc-yh00fP1-Gchkt2tw&callback=initMap';
     requestIdleCallback(() => document.body.appendChild(script));
   }
 }
