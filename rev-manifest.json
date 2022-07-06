@@ -23,7 +23,9 @@
   "images/logos/ergo.jpg": "images/logos/ergo-9feef49795.jpg",
   "images/logos/generali.jpg": "images/logos/generali-a5736129ab.jpg",
   "images/logos/hdi.jpg": "images/logos/hdi-ba3cb53dca.jpg",
+  "images/logos/hdi.png": "images/logos/hdi-47c4a6d941.png",
   "images/logos/warta.jpg": "images/logos/warta-9372379a7e.jpg",
+  "images/logos/warta.png": "images/logos/warta-a11a269e7b.png",
   "images/marker.png": "images/marker-158cbd29ca.png",
   "images/podroze.jpg": "images/podroze-fab38b76e8.jpg",
   "images/podroze@2x.jpg": "images/podroze@2x-0b18335aa4.jpg",
@@ -38,6 +40,6 @@
   "images/zycie.jpg": "images/zycie-18333db55a.jpg",
   "images/zycie@2x.jpg": "images/zycie@2x-83031615cc.jpg",
   "images/zycie_1200x630.jpg": "images/zycie_1200x630-9767f9e286.jpg",
-  "main.css": "main-dc8dee2335.css",
-  "main.css.map": "main-f3a828e891.css.map"
+  "main.css": "main-5e73398f2a.css",
+  "main.css.map": "main-dcdb6e82eb.css.map"
 }
